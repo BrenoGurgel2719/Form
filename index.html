@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 2rem;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 0.5rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #004c99;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        /* Estiliza o asterisco de campos obrigatórios */
+        input:required + span::after,
+        select:required + span::after {
+            content: " *";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de pagamento</h1>
+
+    <form action="links.html" method="get">
+        <p><strong>Campos obrigatórios são seguidos por *</strong></p>
+
+        <section>
+            <h2>Informações de contato</h2>
+
+            <fieldset>
+                <legend>Tratamento</legend>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="radio" name="title" value="M">
+                            Senhor
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="title" value="Ms">
+                            Senhorita
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <p>
+                <label for="name"><span>Nome:</span></label>
+                <input type="text" name="re" id="name" required>
+            </p>
+
+            <p>
+                <label for="email"><span>Email:</span></label>
+                <input type="email" name="em" id="email" required>
+            </p>
+
+            <p>
+                <label for="passw"><span>Senha:</span></label>
+                <input type="password" name="pass" id="passw" required>
+            </p>
+        </section>
+
+        <section>
+            <h2>Informações de pagamento</h2>
+
+            <p>
+                <label for="card"><span>Tipo de bandeira:</span></label>
+                <select name="cardinfor" id="card" required>
+                    <option value="slc">Selecionar</option>
+                    <option value="Visa">Visa</option>
+                    <option value="mc">MasterCard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="number"><span>Número do cartão:</span></label>
+                <input type="number" name="cardnumber" id="number" required>
+            </p>
+
+            <p>
+                <label for="date"><span>Data de validade:</span></label>
+                <input type="date" name="expiration" id="date" required>
+            </p>
+        </section>
+
+        <p style="text-align: center;">
+            <button type="submit">Validar pagamento</button>
+        </p>
+    </form>
+</body>
+</html>
