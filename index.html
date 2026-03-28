@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TTMGZ4TG');</script>
+    <!-- End Google Tag Manager -->
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários</title>
     <style>
-        
-        
         * {
             box-sizing: border-box;
         }
@@ -85,6 +96,7 @@
             font-size: 1rem;
         }
 
+
         p {
             margin-bottom: 1.2rem;
         }
@@ -109,14 +121,21 @@
         }
 
         /* Estiliza o asterisco de campos obrigatórios */
-        input:required + span::after,
-        select:required + span::after {
+        input:required+span::after,
+        select:required+span::after {
             content: " *";
             color: red;
         }
     </style>
 </head>
+
 <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTMGZ4TG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <h1>Formulário de pagamento</h1>
 
     <form action="links.html" method="get">
@@ -186,6 +205,8 @@
         <p style="text-align: center;">
             <button type="submit">Validar pagamento</button>
         </p>
+
     </form>
 </body>
+
 </html>
